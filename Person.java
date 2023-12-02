@@ -3,7 +3,7 @@ public class Person {
     String name;
     String Email;
     String Password;
-    String cardnum;
+    String cardNum;
     static int maxID =0;
     int id;
            //creates empty person
@@ -16,6 +16,6 @@ public class Person {
                 Address=newAddress;
                 Email =newEmail;
                 Password=newPassword;
-                cardnum=newCard;
+                cardNum=newCard;
             }
 }

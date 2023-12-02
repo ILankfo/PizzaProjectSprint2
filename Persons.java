@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
 public class Persons {
-    ArrayList <Person> myPeople;
+    static ArrayList <Person> myPeople;
 
 
     Persons(){}
 
-    public void AddPerson(Person myPerson){
+    public static void AddPerson(Person myPerson){
         myPeople.add(myPerson);
     }
 
@@ -29,5 +29,14 @@ public class Persons {
             }
         }
         return -1;
+    }
+    //initializes an arraylist of people to replicate a SQL table
+    public void load(){
+       Person person1= new Person("James Baxter","2345 Horse way, Marietta, GA", "JBax@gmail.com", "@nimationBoy1", "2345-1234-5674-2343");
+       Persons.AddPerson(person1);
+        Person person2= new Person("Mason Jarson","723 Glass way, Kennesaw GA", "MDixon@gmail.com", "Sh@tterSpree", "7425-1334-5364-3224");
+        Persons.AddPerson(person2);
+        Person person3= new Person("Henry Timms","5632 Bootstrap way, Kennesaw GA", "HTims@gmail.com", "B00tsB0y", "4275-1343-5643-0986");
+        Persons.AddPerson(person3);
     }
 }

@@ -4,11 +4,13 @@ import java.awt.event.ActionListener;
 
 public class Login {
     private static Persons myPeople = new Persons();
-    private JButton button1;
+    private JButton login;
+    private JButton cancelButton;
+    private JPasswordField passwordField1;
 
 
     public Login() {
-        button1.addActionListener(new ActionListener() {
+        login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -17,6 +19,8 @@ public class Login {
     }
 
     public static void main(String[] args) {
+        myPeople.load();
+
 
     }
 
