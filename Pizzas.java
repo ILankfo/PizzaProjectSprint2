@@ -6,7 +6,6 @@ public class Pizzas {
     int pizzaNum;
     String crustType;
     static int maxPizzas = 0;
-    ArrayList <Toppings> Toppings;
 
     Pizzas(String newPizzaName, char newPizzaSize, double newPizzaPrice, int newPizzaNum, String newCrustType) {
         pizzaName = newPizzaName;
