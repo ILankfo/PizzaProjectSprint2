@@ -1,17 +1,17 @@
 public class Pizzas {
-    String PizzaName;
-    char PizzaSize;
+    String pizzaName;
+    char pizzaSize;
     //Small = S, Medium = M, Large = L, ExtraLarge = X
-    double PizzaPrice;
-    int PizzaNum;
-    String CrustType;
-    static int MaxPizzas = 0;
+    double pizzaPrice;
+    int pizzaNum;
+    String crustType;
+    static int maxPizzas = 0;
 
-    Pizzas(String NewPizzaName, char NewPizzaSize, double NewPizzaPrice, int NewPizzaNum, String NewCrustType) {
-        PizzaName = NewPizzaName;
-        PizzaSize = NewPizzaSize;
-        PizzaPrice = NewPizzaPrice;
-        CrustType = NewCrustType;
-        PizzaNum = MaxPizzas++;
+    Pizzas(String newPizzaName, char newPizzaSize, double newPizzaPrice, int newPizzaNum, String newCrustType) {
+        pizzaName = newPizzaName;
+        pizzaSize = newPizzaSize;
+        pizzaPrice = newPizzaPrice;
+        crustType = newCrustType;
+        pizzaNum = maxPizzas++;
     }
 }
