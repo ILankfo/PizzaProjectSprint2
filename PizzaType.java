@@ -3,12 +3,15 @@ import java.util.ArrayList;
 
 public class pizzaType {
     ArrayList <pizzas> pizzas;
-
+    ArrayList <Toppings> toppings;
     pizzaType() {
 
     }
     public void addPizza (pizzas myPizza) {
         pizzas.add(myPizza);
+    }
+    public void addTopping(toppings myToppings) {
+        pizzas.add(myToppings);
     }
     public String getPizzaName(int pizzaID) {
         return pizzas.get(pizzaID).pizzaName;
