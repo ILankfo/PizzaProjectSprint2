@@ -22,11 +22,13 @@ public class Login extends JFrame{
         setSize(400,400);
         setLocationRelativeTo(null);
         setVisible(true);
-
+        myPeople.load();
         Login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                onOK();
+                if(!onOK()){
+                    JOptionPane.showMessageDialog(Login.this,"not a valid Email or Password");
+                }
             }
         });
         Cancel.addActionListener(new ActionListener() {
@@ -39,12 +41,17 @@ public class Login extends JFrame{
 
 
     }
-    private void onOK() {
+    private boolean onOK() {
        if(checkPassword(passwordField1.getText(),passwordField2.getText())){
+          int id= myPeople.findID(passwordField1.getText());
+          new Menu().setVisible(true);
+          Menu.Person=myPeople.getPerson(id);
+
         dispose();
+        return true;
        }else {
 
-           return;
+           return false;
        }
     }
 
@@ -53,7 +60,7 @@ public class Login extends JFrame{
         dispose();
     }
     public static void main(String[] args) {
-        myPeople.load();
+
         new Login();
 
 
