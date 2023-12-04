@@ -3,10 +3,14 @@ public class Topping {
     private String name;
     private double price;
 
+    int ID;
+    static int MaxID=0;
+
     // Constructors
     public Topping(String name, double price) {
         this.name = name;
         this.price = price;
+        ID=MaxID++;
     }
 
     // Getter methods
