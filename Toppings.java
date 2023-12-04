@@ -6,7 +6,7 @@ public class Toppings {
     Toppings(){}
 
         // Creating instances of Topping
-        //loads topping object and adds them to array list
+        //loads topping object and adds them to array list to simulate table
         public void Load(){
             Topping pepperoni = new Topping("Pepperoni", 2.50);
             Topping mushrooms = new Topping("Mushrooms", 1.75);
@@ -28,7 +28,8 @@ public class Toppings {
 
         }
 
-        //adds topping to Array list
+    //Adds Topping to Array list. the quick and dirty ID increments as a new Topping is added,
+    // so the ID is the same as the index
     public static void AddTopping(Topping myTopping){
         myToppings.add(myTopping);
     }

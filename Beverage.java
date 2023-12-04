@@ -12,4 +12,8 @@ public class Beverage {
         bevPrice = newBevPrice;
         bevNum = bevMax++;
     }
+
+    public double getBevPrice() {
+        return bevPrice;
+    }
 }
