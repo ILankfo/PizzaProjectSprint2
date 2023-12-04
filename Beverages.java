@@ -2,10 +2,12 @@ import java.util.ArrayList;
 public class Beverages {
         static ArrayList <Beverage> myBeverages;
         Beverages(){}
-
+        
+        ///method to add beverages to the beverage array
         public static void AddBeverage(Beverage myBeverage){
             myBeverages.add(myBeverage);
         }
+        ///getter methods
         public String getBevName(int bevNum){
             return myBeverages.get(bevNum).bevName;
         }
@@ -18,6 +20,7 @@ public class Beverages {
         public int getBevNum(int bevNum){
             return myBeverages.get(bevNum).bevNum;
         }
+            ///creates an arraylist of beverages
             public void load() {
                 Beverage lCoke = new Beverage("Large Coke",'L',4.99);
                 Beverage mCoke = new Beverage("Medium Coke",'M',2.99);
