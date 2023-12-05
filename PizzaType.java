@@ -1,41 +1,45 @@
 import java.util.ArrayList;
 
 
-public class pizzaType {
-    ArrayList <pizzas> pizzas;
-    ArrayList <Toppings> toppings;
-    pizzaType() {
+public class PizzaType {
+    ArrayList <Pizzas> Pizzas;
+    PizzaType() {
 
     }
-    public void addPizza (pizzas myPizza) {
-        pizzas.add(myPizza);
+    public void AddPizza (Pizzas myPizza) {
+        Pizzas.add(myPizza);
     }
-    public void addTopping(toppings myToppings) {
-        pizzas.add(myToppings);
+    public String getPizzaName(int PizzaID) {
+        return Pizzas.get(PizzaID).PizzaName;
     }
-    public String getPizzaName(int pizzaID) {
-        return pizzas.get(pizzaID).pizzaName;
+    public char getPizzaSize(int PizzaID) {
+        return Pizzas.get(PizzaID).PizzaSize;
     }
-    public char getPizzaSize(int pizzaID) {
-        return pizzas.get(pizzaID).pizzaSize;
+    public double getPizzaPrice(int PizzaID) {
+        return Pizzas.get(PizzaID).PizzaPrice;
     }
-    public double getPizzaPrice(int pizzaID) {
-        return pizzas.get(pizzaID).pizzaPrice;
+    public int getPizzaNum(int PizzaID) {
+        return Pizzas.get(PizzaID).PizzaNum;
     }
-    public int getPizzaNum(int pizzaID) {
-        return pizzas.get(pizzaID).pizzaNum;
+    public String getPizzaCrust(int PizzaID) {
+        return Pizzas.get(PizzaID).CrustType;
     }
-    public String getPizzaCrust(int pizzaID) {
-        return pizzas.get(pizzaID).crustType;
-    }
-    public void PizzaOptions() {
-        Pizzas pizza1 = new Pizzas("Cheesy Deluxe", 'L', 12.99, 1, "Cheesy Crust");
-        Pizzas.add(pizza1);
-        Pizzas pizza2 = new Pizzas("Meat Lovers", 'M', 13.99, 2, "Normal Crust");
-        Pizzas.add(pizza2);
-        Pizzas pizza3 = new Pizzas("Vegan Pizza", 'S', 8.99, 3, "Thin Crust");
-        Pizzas.add(pizza1);
-        Pizzas pizza4 = new Pizzas("Pineapple Party Pizza", 'X', 15.99, 4, "Normal Crust");
-        Pizzas.add(pizza4);
+    public void PizzaOptions(int choice) {
+        if (choice == 1) {
+            Pizzas pizza1 = new Pizzas("Cheesy Deluxe", 'L', 12.99, 1, "Cheesy Crust");
+            Pizzas.add(pizza1);
+        }
+        if (choice == 2) {
+            Pizzas pizza2 = new Pizzas("Meat Lovers", 'M', 13.99, 2, "Normal Crust");
+            Pizzas.add(pizza2);
+        }
+        if (choice == 3) {
+            Pizzas pizza3 = new Pizzas("Vegan Pizza", 'S', 8.99, 3, "Thin Crust");
+            Pizzas.add(pizza3);
+        }
+        if (choice == 4) {
+            Pizzas pizza4 = new Pizzas("Pineapple Party Pizza", 'X', 15.99, 4, "Normal Crust");
+            Pizzas.add(pizza4);
+        }
     }
 }

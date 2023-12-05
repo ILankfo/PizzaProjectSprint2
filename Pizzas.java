@@ -1,31 +1,19 @@
-import java.util.ArrayList;
-
-public class Pizzas {
-    String pizzaName;
-    char pizzaSize;
+public class Pizzas extends PizzaType {
+    String PizzaName;
+    char PizzaSize;
     //Small = S, Medium = M, Large = L, ExtraLarge = X
-     static double pizzaPrice;
-    int pizzaNum;
-    String crustType;
-    static int maxPizzas = 0;
+    double PizzaPrice;
+    int PizzaNum;
+    String CrustType;
+    static int MaxPizzas = 0;
+    Pizzas() {
 
-    static ArrayList <Topping> Toppings = new ArrayList<Topping>();
-
-    Pizzas(){};
-    Pizzas(String newPizzaName, char newPizzaSize, double newPizzaPrice, int newPizzaNum, String newCrustType) {
-        pizzaName = newPizzaName;
-        pizzaSize = newPizzaSize;
-        pizzaPrice = newPizzaPrice;
-        crustType = newCrustType;
-        pizzaNum = maxPizzas++;
     }
-
-    public double getPizzaPrice() {
-        return pizzaPrice;
-    }
-
-    public void addToppings(Topping mytopping){
-        Toppings.add(mytopping);
-        pizzaPrice+=mytopping.getPrice();
+    Pizzas(String NewPizzaName, char NewPizzaSize, double NewPizzaPrice, int NewPizzaNum, String NewCrustType) {
+        this.PizzaName = NewPizzaName;
+        this.PizzaSize = NewPizzaSize;
+        this.PizzaPrice = NewPizzaPrice;
+        this.CrustType = NewCrustType;
+        this.PizzaNum = MaxPizzas++;
     }
 }
