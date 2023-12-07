@@ -18,4 +18,16 @@ public class Person {
                 Password=newPassword;
                 cardNum=newCard;
             }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public String getCardNum() {
+        return cardNum;
+    }
 }
